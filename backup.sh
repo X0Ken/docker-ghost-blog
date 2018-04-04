@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pip install -U bypy
+
 FMT="%y-%m-%d"
 cp /var/lib/ghost/data/ghost.db /var/lib/backup-site/ghost-$(date +$FMT).db
 bypy upload /var/lib/backup-site/ghost-$(date +$FMT).db blog/ghost-$(date +$FMT).db
